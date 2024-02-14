@@ -1,0 +1,21 @@
+Git定义：分布式版本 控制 软件
+
+安装Git：https://git-scm.com/download/win
+  右键 -> Open git bash here
+  $ git --version
+
+版本控制（git管理文件夹）：
+  step1：进入要管理的文件夹（包含开发的代码）
+  step2：初始化
+  $ git init
+  step3：管理
+  $ git status # 检测当前文件下的文件状态，标红的文件代表新增文件，之前没有
+  $ git add xxx.py # 管理某一个文件，随后通过git status发现该文件状态发生变化（颜色变绿）
+  $ git add . # 管理所有未被管理文件
+  step4：生成版本
+  $ git commit -m 'xxxxxx' # 生成一个版本
+  $ git log # 查看以往版本生成记录
+
+  注：首次使用报错可能因为缺少用户配置（once for all）
+  $ git config --global user.email "you@example.com"
+  $ git config --global user.name "Your Name"
