@@ -1,6 +1,6 @@
 # learn_git
 learn github
-#### Part I: learn from bilibili:
+### Part I: learn from bilibili:
 #### https://www.bilibili.com/video/BV1YW4y177ic/?spm_id_from=333.337.search-card.all.click
 #### Git & GitHub基础入门教学！全网最简单轻松的教学视频！
 
