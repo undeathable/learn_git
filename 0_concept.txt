@@ -19,3 +19,27 @@ Git定义：分布式版本 控制 软件
   注：首次使用报错可能因为缺少用户配置（once for all）
   $ git config --global user.email "you@example.com"
   $ git config --global user.name "Your Name"
+
+  git三大区概念：
+  工作区：已存在文件、新增文件（红色）、已修改文件（红色）
+  暂存区：通过add .指令从工作区导入
+  版本库：通过commit指令从暂存区导入
+
+git回滚：
+  # 回滚到之前的版本
+  $ git log
+  $ git reset --hard 版本号 # git log中的commit后面的md5码值
+
+  # 回滚到之后的版本（回滚到之前版本后，又想回滚到后面版本）
+  $ git reflog
+  $ git reset --hard 版本号
+
+git工作区 暂存区切换
+  # 将git status检测“红色”的文件，变回改动前的已存在文件状态（工作区：已存在文件 <- 新增文件/已修改文件（红色））
+  $ git checkout -- filename
+  
+  # 将暂存区的“绿色”的文件，变回检测“红色”的文件（工作区：新增文件/已修改文件（红色） <- 暂存区 add. 之后的文件（绿色））
+  $ git reset HEAD filename
+  注：随后再执行 git checkout就可再轨道变动前的已存在文件状态
+
+
